@@ -1,15 +1,27 @@
+import Router from "./Router.js";
 import Component from "./core/Component.js";
-import CounterPage from "./pages/CounterPage.js";
+import createPages from "./pages/index.js";
 
 export default class App extends Component {
   template() {
     return `
-      <main data-component="counter-app"></main>
+    <header>
+      <a href="#/">Home</a>
+      <a href="#/counter">Counter</a>
+      <a href="#/fetch">Fetch</a>
+    </header>
+    <main></main>
     `;
   }
 
   mounted() {
-    const $counterApp = this.$target.querySelector('[data-component="counter-app"]');
-    new CounterPage($counterApp);
+    const $main = this.$target.querySelector("main");
+    const pages = createPages($main);
+
+    const router = new Router($main);
+    router.addRoute("#/", pages.home);
+    router.addRoute("#/counter", pages.counter);
+    router.addRoute("#/fetch", pages.fetch);
+    router.start();
   }
 }
