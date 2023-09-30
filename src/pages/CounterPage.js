@@ -4,8 +4,8 @@ import Counter from "../components/Counter.js";
 export default class CounterPage extends Component {
   template() {
     return `
-        <h1>Counter Page</h1>
-        <div data-component="counter-up"></div>
+      <h1>Counter Page</h1>
+      <div data-component="counter-up"></div>
     `;
   }
 
