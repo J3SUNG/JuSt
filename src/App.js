@@ -10,6 +10,7 @@ export default class App extends Component {
       <a href="#/counter">Counter</a>
       <a href="#/fetch">Fetch</a>
       <a href="#/swirl">Swirl</a>
+      <a href="#/svgText">SVG Text</a>
     </header>
     <main></main>
     `;
@@ -24,6 +25,7 @@ export default class App extends Component {
     router.addRoute("#/counter", pages.counter);
     router.addRoute("#/fetch", pages.fetch);
     router.addRoute("#/swirl", pages.swirl);
+    router.addRoute("#/svgText", pages.svgText);
     router.start();
   }
 }

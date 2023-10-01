@@ -1,0 +1,54 @@
+.svg-text-section {
+  height: 100vh;
+  background: #082330;
+  background-size: 0.12em 100%;
+  font: 16em/1 arial;
+}
+
+.svg-text__symbol__text {
+  font-size: 0.5em;
+}
+
+.svg-text-section svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.svg-text__symbol__text__text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 3px;
+  animation: stroke-offset 10s infinite linear;
+}
+
+.svg-text__symbol__text__text-copy:nth-child(1) {
+  stroke: black;
+  stroke-dashoffset: 7%;
+}
+
+.svg-text__symbol__text__text-copy:nth-child(2) {
+  stroke: white;
+  stroke-dashoffset: 14%;
+}
+
+.svg-text__symbol__text__text-copy:nth-child(3) {
+  stroke: black;
+  stroke-dashoffset: 21%;
+}
+.svg-text__symbol__text__text-copy:nth-child(4) {
+  stroke: white;
+  stroke-dashoffset: 28%;
+}
+.svg-text__symbol__text__text-copy:nth-child(5) {
+  stroke: black;
+  stroke-dashoffset: 35%;
+}
+
+@keyframes stroke-offset {
+  50% {
+    stroke-dasharray: 35%;
+    stroke-dasharray: 0 88.55;
+  }
+}
